@@ -7,6 +7,26 @@
     <title>Simulador</title>
 </head>
 <body>
-    
+    Insira o valor da passagem: <input id="valor_passagem"><br>
+    Insira quantas viagens você fez: <input id="qntd_viagens"><br>
+    <button onclick="simulador()">Calcular investimento.</button>
+    <div id="mensagem" style="display: none">
+        <p>Suas passagens contribuíram com <span id="valor_convencional">X</span>% para a aquisição de um novo ônibus convencional.</p>
+        <p>Suas passagens contribuíram com <span id="valor_articulado">Y</span>% para a aquisição de um novo ônibus articulado</p>
+    </div>
 </body>
 </html>
+
+<!--=============!!!!REVISAR AS FÓRMULAS DO SIMULADOR!!!!=============-->
+<!--Área destinada ao script do simulador financeiro-->
+<script>
+    function simulador()
+    {
+        var investimento = valor_passagem.value*qntd_viagens.value;
+        var convencional = (340000-investimento);
+        var articulado = (840000/investimento);
+        mensagem.style.display="block";
+        valor_convencional.innerHTML=convencional.toFixed(2);
+        valor_articulado.innerHTML=articulado.toFixed(2);
+    }
+</script>
