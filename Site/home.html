@@ -6,33 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Control Block - Home</title>
+    <!--Link para o css da página-->
+    <link rel="stylesheet" type="text/css" href="home.css">
+
 </head>
 
 <body>
 
     <!--Área do cabeçalho-->
     <header>
+            <div class="menu">
         <!--Área do menu-->
         <nav>
             <ul>
-                <li><a href="#"> Home</a></li>
+                <li><a href="home.html" class="nao_selec"> Home</a></li>
                 <!--Botão de navegação para a área home-->
-                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#sobre" class="nao_selec">Sobre nós</a></li>
                 <!--Botão de navegação para a área sobre nós-->
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#produtos" class="nao_selec">Produtos</a></li>
                 <!--Botão de navegação para a área produtos-->
-                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#equipe" class="nao_selec">Equipe</a></li>
                 <!--Botão de navegação para a área equipe-->
-                <li><a href="">Cadastro</a></li>
-                <!--Botão de navegação para a área cadastro-->
-                <ul>
-                    <li><a href="C:\Users\infin\Desktop\Site\cad_motorista.html">Motoristas</a></li>
-                    <!--Botão de navegação para a página cadastro de motoristas-->
-                    <li><a href="C:\Users\infin\Desktop\Site\cad_passageiro.html">Passageiros</a></li>
-                    <!--Botão de navegação para a página cadastro de passageiros-->
-                </ul>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="" class="nao_selec">Cadastro</a></li>
+                 <!--Botão de navegação para a área cadastro-->
+                <li><a href="" class="nao_selec">Motoristas</a></li>
+                <!--Botão de navegação para a página cadastro de motoristas-->
+                <li><a href="" class="nao_selec">Passageiros</a></li>
+                <!--Botão de navegação para a página cadastro de passageiros-->
+                <li><a href="" class="nao_selec">Contato</a></li>
                 <!--Botão de navegação para a área contato-->
+                <ul>
+            </div>
+        </ul>
             </ul>
         </nav>
         <!--Fim do menu-->
@@ -41,7 +46,8 @@
 
     <!--Área de introdução da página-->
     <section id="home">
-        <div>
+        <div class="titulo">
+                <div class="fadeIn">
             <h1>Bem-vindo a Control Block</h1>
             <!--Apresentação do nome da empresa-->
             <h2>Soluções em IoT para seus problemas.</h2>
@@ -54,27 +60,53 @@
     <main>
 
         <!--Área sobre nós-->
-        <section id="sobre"></section>
+        <section id="sobre">
+
+        </section>
+
         <!--Fim da área sobre nós-->
 
-        <!--Área dos nossos produtos-->
-        <section id="produtos">
+        <!--Área dos nossos produto
+       
             <h1>Control Bus</h1>
-            Control Bus é um projeto que tem como objetivo trazer aos gestores do sistema de transposte público
-            (SPTrans) e às empresas que prestam serviços de transporte coletivo, as seguintes soluções:
-            <ul>
-                <li>Entender sua real demanda em cada uma das linhas de ônibus oferecidas;</li>
-                <li>Contabilizar de maneira automatizada o fluxo de passageiros, seja na entrada ou saída, e entender o</li>
-                <li>comportamento dos usuários no decorrer dos intinerarios dos ônibus;</li>
-                <li>Obter informações em tempo real das rotas dos ônibus e sua lotação e disponibilizarem aos usúarios, visando o equilibrio e conforto.</li>
-            </ul>
-            
+        <section id="services">
+            <div class="box">
+                <div class="container wow fadeIn">
+                  <div class="section-header">
+                    <p class="section-description">Entender sua real demanda em cada uma das linhas de ônibus oferecidas</p>
+                  </div>
+                </div>
+                <div class="box">
+                        <div class="container wow fadeIn">
+                          <div class="section-header">
+                            <p class="section-description">omportamento dos usuários no decorrer dos intinerarios dos ônibus</p>
+                          </div>
 
+                        <div class="box">
+                                <div class="container wow fadeIn">
+                                  <div class="section-header">
+                                    <p class="section-description">Obter informações em tempo real das rotas dos ônibus e sua lotação e disponibilizarem aos usúarios, visando o equilibrio e conforto.</p>
+                                  </div>
+                                </div>
+                                s-->
         </section>
         <!--Fim da área dos produtos-->
 
-        <!--Área de apresentação dos funcionários-->
-        <section id="equipe"></section>
+        <!--Área de apresentação dos funcionários
+        <section id="equipe">
+                <h2>Time por trás do projeto</h2>
+                <div class="sobre_nos">
+    
+                <img src="" class="circulo"> 
+                <img src="" class="circulo">
+                <img src="" class="circulo">
+                <img src="" class="circulo">
+                <img src="" class="circulo">
+                <img src="" class="circulo">
+                -->
+
+    </div>
+        </section>
         <!--Fim da área de apresentação dos funcionários-->
 
         <!--Área de contato da empresa-->
