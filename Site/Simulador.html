@@ -12,7 +12,6 @@
 
     Quantos ônibus há rodando na linha, por hora? <input id="onibus"> <br>
     Qual o valor da passagem? <input id="passagem"> <br>
-    Quantos motoristas há na linha? <input id="motorista"><br>
 
     <button onclick="simulador()">Veja seu lucro!</button>
     
@@ -24,8 +23,12 @@
 <script>
     function simulador()
     {
-        var pessoa_comum=15;
-        var pessoa_pico=25;
+        var pessoa_comum=20;
+        var pessoa_pico=30;
+
+        var pessoa_comum2=15;
+        var pessoa_pico2=25;
+
 
         var horario_comum=13;
         var horario_pico=7;
@@ -35,15 +38,25 @@
         var receita_comum=(passagem.value * pessoa_comum * onibus.value * horario_comum * dias_mes);
         var receita_pico=(passagem.value * pessoa_pico * onibus.value * horario_pico * dias_mes);
 
-        var receita_bruta=Number(receita_comum + receita_pico);
+        var receita_bruta=(receita_comum + receita_pico);
 
         var sal_moto= 1997.76;
         var custo_onibus=32000;
 
-        var desconto=(sal_moto * motorista.value) + (custo_onibus * onibus.value);
+        var desconto=(sal_moto * (onibus.value * 2)) + (custo_onibus * onibus.value);
 
         var receita_liquida=(receita_bruta - desconto);
 
-alert(`Seu lucro será de ${receita_liquida.toFixed(2)}`);
+        var receita_comum2=(passagem.value * pessoa_comum2 * (onibus.value + 3)* horario_comum * dias_mes);
+        var receita_pico2=(passagem.value * pessoa_pico2 * (onibus.value + 3) * horario_pico * dias_mes);
+
+        var receita_bruta2=(receita_comum2 + receita_pico2);
+
+        var desconto2=(sal_moto * ((onibus.value + 3) * 2)) + (custo_onibus * (onibus.value + 3));
+
+        var receita_liquida2=(receita_bruta2 - desconto2);
+
+       alert(`Seu lucro é de $${receita_liquida.toFixed(2)} sem nossa solução`);
+       alert(`Com nossa solução seu lucro será de $${receita_liquida2.toFixed(2)} reais`);
     }
 </script>
