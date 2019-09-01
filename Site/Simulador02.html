@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador financeiro</title>
+</head>
+<body>
+        <h2> Com o simulador financeiro voce pode calcular o quanto sua empresa pode economizar
+                utilizando nosso produto!</h2>
+                <!--O form só serve para campo de entrada de texto-->
+    <form>
+      <b> Quanto a empresa gasta fazendo o seviço manual?</b> <input type="text" id="servico">
+      <br>
+      <br>
+      <b>Qual o lucro da empresa? </b> <input type="text" id="lucro">
+    </form>
+    <br>
+    <br>
+    <button type="button" onclick="economia()">Fazer um orçamento agora!</button>
+    <div id="div_mensagem"></div>
+</div>
+    
+</body>
+</html>
+
+<script>
+     function economia() {
+// para o simulador financeiro calcular o quanto a empresa gasta com o serviço manual e o lucro da empresa menos o preço fixo do nosso produto
+// gera o custo mensal e depois é só multiplicar por 12 para gerar o preço anual
+    var economizando_mensal =lucro.value - 1000;
+    var economizando_anual = economizando_mensal * 12;
+// só criei uma variavel pra frase e o "replace" serve para adicionar ponto e virgula em números de casa decimais 
+    var frase_econom = `Com os nossos serviços, sua empresa economiza R$${economizando_mensal.toFixed(2).replace('.', ',')} 
+           mensamente e ainda consegue economizar um valor de aproximadamente R$${economizando_anual.toFixed(2).replace('.', ',')} 
+            anualmente! O que você está esperando?`;
+    div_mensagem.innerHTML = frase_econom;
+
+  }
+</script>
