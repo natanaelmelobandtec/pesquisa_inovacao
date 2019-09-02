@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simulador</title>
+    <title>Simulador Financeiro</title>
 </head>
 <body>
+    <h1>ORÇAMENTO</h1>
+    <br>
+    Em quantos onibus quer colocar o nosso sensor? <input id="qtd_bus">
+    <br>
+    Quantas portas terá o onibus? (Onibus entre 2 e 8 portas) <input type="text" id="qtd_portas">
+    <br>
+    Por quantos meses deseja utilizar nossos serviços? <input type="text" id="qtd_meses">
+    <br>
+    <button onclick="calcular()">Calcular orçamento</button>
+    <br>
+    <br>
 
-    <h3>Escolha a melhor opção para você!!</h3> <br>
+    <div id="orcamento" style="display: none">
+        <span>O valor da compra de nossos serviços é de <b>R$ <b id="total">.</b> reais</b> e a instalação será gratuita!</span>
+        <br>
+        <span>Você irá pagar uma mensalidade de <b>R$ <b id="manutencao">.</b> reais</b> por manutenção!</span>
+    </div>
 
-    Quantos meses de uso você deseja ter? <input id="meses"> <br>
-   
-    <button onclick="simulador()">Veja o valor da Compra!</button>
-    
+    <script>
+        function calcular() {
+            var valor_arduino = 50 * Number(qtd_bus.value);
+            var valor_sensor = 30 * Number(qtd_portas.value);
+            var valor_nuvem = 450;
+            var valor_manutencao = 150 * Number(qtd_bus.value);
+            var valor_total = valor_arduino + valor_nuvem + valor_sensor;
+
+            total.innerHTML = valor_total;
+            manutencao.innerHTML = valor_manutencao;
+            orcamento.style.display="block"
+        }
+    </script>
 </body>
 </html>
-
-<!--=============!!!!REVISAR AS FÓRMULAS DO SIMULADOR!!!!=============-->
-<!--Área destinada ao script do simulador financeiro-->
-<script>
-    function simulador()
-    {
-  var valor_padrao=5000
-  var valor_total=(valor_padrao+((valor_padrao*0.1)* meses.value));
-  var parcela= (valor_total/meses.value).toFixed(2);
-
-  alert(`Com ${meses.value} meses de uso, você terá que pagar $${valor_total} reais`);
-  alert(`Porém com as parcelas, por mês você pagaria $${parcela} reais`)
-    }
-</script>
