@@ -9,20 +9,31 @@
 <body>
     <h1>ORÇAMENTO</h1>
     <br>
-    Em quantos onibus quer colocar o nosso sensor? <input id="qtd_bus">
-    <br>
-    Quantas portas terá o onibus? (Onibus entre 2 e 8 portas) <input type="text" id="qtd_portas">
-    <br>
+    Em quantos onibus quer colocar o nosso sensor? <input id="qtd_bus" autofocus>
+    <br><br>
+    Quantas portas tem no onibus:
+    <select id="qtd_portas">
+        <option value=""> </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+</select>
+    <br><br>
     Por quantos meses deseja utilizar nossos serviços? <input type="text" id="qtd_meses">
-    <br>
+    <br><br>
     <button onclick="calcular()">Calcular orçamento</button>
-    <br>
-    <br>
+    <br><br>
 
     <div id="orcamento" style="display: none">
-        <span>O valor da compra de nossos serviços é de <b>R$ <b id="total">.</b> reais</b> e a instalação será gratuita!</span>
+        <span>O valor da compra de nossos serviços será de <b>R$ <b id="total">.</b></b>!</span>
         <br>
-        <span>Você irá pagar uma mensalidade de <b>R$ <b id="manutencao">.</b> reais</b> por manutenção!</span>
+        <span>Você irá pagar uma mensalidade de <b>R$ <b id="manutencao">.</b></b> por manutenção!</span>
+        <br>
+        <span>Contrantando o nosso serviço agora, você terá um desconto de <b>10%</b> na contratação e a instalação será totalmente <b>GRATUITA</b>!!!</span>
     </div>
 
     <script>
