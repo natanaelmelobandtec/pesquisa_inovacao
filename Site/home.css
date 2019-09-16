@@ -137,16 +137,24 @@
     padding: 80px 0 60px 0;
   }
   
-  .box {
-    padding: 20px 10px;
-    margin-bottom: 50px;
-    text-align: center;
-    border: 1px solid #e6e6e6;
-    height: 50px;
-    position: relative;
-    background: #c92d2d;
+ .box1 {
+   padding: 20px 30px;
+   width: 150px;
+  border: 5px solid; /* A borda do caixa*/
+  border-color:black;
     float: left;
+    margin-right: 60px;
   }
+  .box2 {
+    padding: 20px 30px;
+    width: 140px;
+   border: 5px solid; /* A borda do caixa*/
+   border-color:black;
+  float: left;
+  margin-right: 60px;
+
+   }
+   
   
 
   #services .title {
@@ -164,4 +172,7 @@
     font-size: 14px;
     line-height: 24px;
   }
- 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 80px 200px auto 40px;
+  }
